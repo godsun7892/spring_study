@@ -14,12 +14,7 @@ public class ObjectFactory {
 
     @Bean
     public PaymentService paymentService() {
-        return new PaymentService(cachedExrateProvider());
-    }
-
-    @Bean
-    public ExRateProvider cachedExrateProvider() {
-        return new CachedExRateProvider(exRateProvider());
+        return new PaymentService(exRateProvider());
     }
 
     @Bean

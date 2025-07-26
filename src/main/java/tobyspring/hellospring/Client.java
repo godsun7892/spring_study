@@ -17,15 +17,5 @@ public class Client {
         Payment payment = paymentService.prepare(100L, "USD", BigDecimal.valueOf(50.7));
         System.out.println("Payment : " +  payment);
 
-        PaymentService paymentService2 = beanFactory.getBean(PaymentService.class);
-        Payment payment2 = paymentService2.prepare(100L, "USD", BigDecimal.valueOf(50.7));
-        System.out.println("Payment2 : " +  payment2);
-
-        TimeUnit.SECONDS.sleep(3);
-
-        PaymentService paymentService3 = beanFactory.getBean(PaymentService.class);
-        Payment payment3 = paymentService3.prepare(100L, "USD", BigDecimal.valueOf(50.7));
-        System.out.println("Payment3 : " +  payment3);
-
     }
 }
